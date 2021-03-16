@@ -1,0 +1,51 @@
+body {
+     margin: 0;
+
+}
+
+.container {
+     width: 99vw;
+     height: 99vw;
+     background-color: #569;
+     font-family: 'Quicksand', sans-serif;
+     font-size: 20px;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 8% 1fr 1fr 12%;
+     /* shorthand would be rows, then columns grid-template:50px 1fr 1fr 100px /repeat(3, 1fr);  */
+     gap: 10px;
+     padding: 10px;
+     box-sizing: border-box;
+}
+
+.container div {
+     padding: 10px;
+     /* border: 1px solid #000 */
+}
+
+.header {
+     grid-column-start: 1;
+     grid-column-end: 4;
+     background-image: linear-gradient(rgba(255,0,0,0), rgb(255, 0, 0));
+     text-align: center;
+}
+
+.content-large {
+     grid-row-start: 2;
+     grid-row-end: 4;
+     grid-column-start: 1;
+     grid-column-end: 3;
+     background-image: linear-gradient(rgba(255,0,0,0), rgba(255,0,0,1));
+}
+
+.content-small {
+     background-color: #000;
+     /* center the video in the div */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.footer {
+     /* shorthand for grid-column-start: 1; grid-column-end: span 3; */
+     grid-column: 1 / span 3;
+}
